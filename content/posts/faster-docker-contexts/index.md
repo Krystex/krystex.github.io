@@ -18,6 +18,7 @@ docker context create remote --docker "host=ssh://user@myhost.org"
 docker context use remote
 ```
 With the `docker context use` command, your remote endpoint is now the default docker endpoint on your system.
+All commands you execute on your machine are actually executed on your specified ssh host.
 You can take a look at your contexts with the command `docker context ls`.
 
 
