@@ -8,6 +8,7 @@ tags: ["devops", "linux"]
 showToc: true
 TocOpen: false
 draft: false
+ShowBreadCrumbs: true
 ---
 
 So if you are like me, who likes to develop with an remote docker host, you likely used 
@@ -57,13 +58,21 @@ The last line is for mounting the remote socket at your host. Let's break it dow
 - `-L <localsocket>:<remotesocket>`: forward a remote socket to your host
 
 The advantage of this command: it holds a long-running connection to your server of choice.
-I always execute this script in a `tmux` session so I can always connect to my server.
+I execute this script in a `tmux` session so it's always running in the background.
 
 Now you just have to create a context for your forwarded socket:
 ```bash
 docker context rm remote
-docker context create remote --docker "unix:///tmp/docker-cc.sock"
+docker context create remote --docker "unix:///tmp/docker.remote.sock"
 docker context use remote
 ```
 
 **That's it!**
+
+Now you can use test your connection:
+
+```
+docker ps
+```
+
+You should see a noticable improvement if don't have the best server or internet connection.
