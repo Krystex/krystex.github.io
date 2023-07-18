@@ -75,14 +75,14 @@ params:
   homeInfoParams:
     Title: "Welcome to my blog \U0001F44B"
     Content: >
-      Hey there! I'm Simon, a machine learning engineer from Germany. 
+      Hey there! I'm Simon Kundrat, a machine learning engineer from Germany. 
 
 
       On here I write about topics like *machine learning*, *devops* and *music theory*.
 
   socialIcons:
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/krystex"
     - name: linkedin
       url: "https://www.linkedin.com/in/simon-kundrat/"
 
